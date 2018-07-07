@@ -1,0 +1,95 @@
+{
+   "Person": [
+      {
+         "@Name": "V, MC, V ['Erdi']",
+         "Part": [
+            "Vowel",
+            "MidConsonant",
+            "Vowel"
+         ]
+      },
+      {
+         "@Name": "V, MC, VV ['Erdoo']",
+         "Part": [
+            "Vowel",
+            "MidConsonant",
+            "DoubleVowel"
+         ]
+      },
+      {
+         "@Name": "Fricative, VV, Nasal ['Sean']",
+         "Part": [
+            "Fricative",
+            "DoubleVowel",
+            "Nasal"
+         ]
+      },
+      {
+         "@Name": "Fricative, VV, C ['Seaz']",
+         "Part": [
+            "Fricative",
+            "DoubleVowel",
+            "Consonant"
+         ]
+      },
+      {
+         "@Name": "CVCVC ['Seton']",
+         "Part": [
+            "Consonant",
+            "Vowel",
+            "Consonant",
+            "Vowel",
+            "Consonant"
+         ]
+      },
+      {
+         "@Name": "V, C, V ['Eti']",
+         "Part": [
+            "Vowel",
+            "Consonant",
+            "Vowel"
+         ]
+      },
+      {
+         "@Name": "V, CC, V ['Etti']",
+         "Part": [
+            "Vowel",
+            "DoubleConsonant",
+            "Vowel"
+         ]
+      },
+      {
+         "@Name": "Nasal, V, Fricative, V, Guttural ['Masher']",
+         "Part": [
+            "Nasal",
+            "Vowel",
+            "Fricative",
+            "Vowel",
+            "EndingNasal"
+         ]
+      },
+      {
+         "@Name": "Fricative, V, DoubleGlide, V, EndingNasal ['Sawyer']",
+         "Part": [
+            "Fricative",
+            "Vowel",
+            "DoubleGlide",
+            "Vowel",
+            "EndingNasal"
+         ]
+      },
+      {
+         "@Name": "Orcish [Gruph Norgle]",
+         "Part": [
+            "OrcBegin",
+            "Vowel",
+            "Fricative",
+            "Separator",
+            "OrcBegin2",
+            "Vowel",
+            "OrcMiddle",
+            "Vowel"
+         ]
+      }
+   ]
+}

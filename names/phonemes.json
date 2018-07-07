@@ -1,0 +1,287 @@
+{
+   "Phonemes": [
+      {
+         "@Name": "Affricate",
+         "Part": [
+            "ch",
+            "dg",
+            "j"
+         ]
+      },
+      {
+         "@Name": "Alveolar",
+         "Part": [
+            "d",
+            "l",
+            "n",
+            "r",
+            "s",
+            "t",
+            "z"
+         ]
+      },
+      {
+         "@Name": "Bilabial",
+         "Part": [
+            "b",
+            "m",
+            "p"
+         ]
+      },
+      {
+         "@Name": "BilabialStop",
+         "Part": [
+            "b",
+            "p"
+         ]
+      },
+      {
+         "@Name": "Complex",
+         "Part": [
+            "sch",
+            "thr"
+         ]
+      },
+      {
+         "@Name": "Consonant",
+         "Part": [
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "v",
+            "z"
+         ]
+      },
+      {
+         "@Name": "DoubleConsonant",
+         "Part": [
+            "bb",
+            "dd",
+            "ff",
+            "ll",
+            "mm",
+            "nn",
+            "rr",
+            "ss",
+            "ss",
+            "tt"
+         ]
+      },
+      {
+         "@Name": "DoubleGlide",
+         "Part": "wy"
+      },
+      {
+         "@Name": "EndingNasal",
+         "Part": [
+            "g",
+            "ng",
+            "r"
+         ]
+      },
+      {
+         "@Name": "Fricative",
+         "Part": [
+            "ch",
+            "f",
+            "ph",
+            "s",
+            "sh",
+            "th",
+            "v",
+            "z"
+         ]
+      },
+      {
+         "@Name": "Glide",
+         "Part": [
+            "w",
+            "y"
+         ]
+      },
+      {
+         "@Name": "Glottal",
+         "Part": "h"
+      },
+      {
+         "@Name": "Liquid",
+         "Part": [
+            "l",
+            "r"
+         ]
+      },
+      {
+         "@Name": "MidConsonant",
+         "Part": [
+            "ct",
+            "dr",
+            "dw",
+            "ft",
+            "mk",
+            "nd",
+            "ndr",
+            "nf",
+            "nj",
+            "nk",
+            "ns",
+            "nt",
+            "ny",
+            "pr",
+            "ps",
+            "rd",
+            "rg",
+            "rk",
+            "rm",
+            "rn",
+            "rz",
+            "sl",
+            "st",
+            "stl",
+            "wl"
+         ]
+      },
+      {
+         "@Name": "Nasal",
+         "Part": [
+            "m",
+            "n"
+         ]
+      },
+      {
+         "@Name": "Palatal",
+         "Part": [
+            "ch",
+            "dg",
+            "s",
+            "j",
+            "sh",
+            "y"
+         ]
+      },
+      {
+         "@Name": "OrcBegin",
+         "Part": [
+            "gn",
+            "gr",
+            "hr",
+            "k'z",
+            "x",
+            "z",
+            "zr"
+         ]
+      },
+      {
+         "@Name": "OrcBegin2",
+         "Part": [
+            "gn",
+            "gr",
+            "hr",
+            "k",
+            "m",
+            "n",
+            "x",
+            "z",
+            "zh"
+         ]
+      },
+      {
+         "@Name": "OrcMiddle",
+         "Part": [
+            "gh",
+            "gl",
+            "gzh",
+            "rg",
+            "rgh",
+            "rgl",
+            "rl",
+            "rmg",
+            "rng",
+            "zg"
+         ]
+      },
+      {
+         "@Name": "Stop",
+         "Part": [
+            "b",
+            "d",
+            "g",
+            "k",
+            "p",
+            "t"
+         ]
+      },
+      {
+         "@Name": "Velar",
+         "Part": [
+            "g",
+            "k",
+            "ng",
+            "w"
+         ]
+      },
+      {
+         "@Name": "Dipthong",
+         "Part": [
+            "ay",
+            "ea",
+            "ee",
+            "ei",
+            "oa",
+            "oe",
+            "ou",
+            "ow",
+            "oy",
+            "y"
+         ]
+      },
+      {
+         "@Name": "Vowel",
+         "Part": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u"
+         ]
+      },
+      {
+         "@Name": "DoubleVowel",
+         "Part": [
+            "ae",
+            "au",
+            "ea",
+            "ey",
+            "ie",
+            "io",
+            "oe",
+            "oi",
+            "oo",
+            "ou",
+            "ue",
+            "ui",
+            "ya",
+            "yo"
+         ]
+      },
+      {
+         "@Name": "Separator",
+         "Part": [
+            "'",
+            "-",
+            " "
+         ]
+      }
+   ]
+}

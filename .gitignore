@@ -1,0 +1,11 @@
+# Files
+
+names/_sourceNameData.xml
+
+
+# Environments
+
+venv/
+
+
+.idea
