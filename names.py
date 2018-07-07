@@ -22,14 +22,12 @@ def gen():
     """
     Fetches current phonemes and templates and generates a name.
 
-    Eventually, this will be expanded so that it generates multiple names limited to specific phonemes or template
-    parameters.
+    Eventually, this will be expanded so that it generates names limited to specific phonemes or template  parameters.
     :return: Returns a string-based name
     """
     phonemes = fetch('phonemes', 'phonemes')
     templates = fetch('templates', 'person')
     random_template = choice(list(templates.items()))
-    print(random_template[0])
     name = ''.join([choice(phonemes[x]) for x in random_template[1]]).title()
     return name
 
