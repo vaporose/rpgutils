@@ -1,73 +1,79 @@
 import json
 from random import choice
+from abc import ABC, abstractmethod
 
 
-class Name:
+class Name(ABC):
+    """
+    A name base class. Currently this is an abstract base class as I had intended to support multiple types of names
+    via subclasses.
+    """
 
-    def __init__(self, names_to_generate: dict):
-        self._get_names(names_to_generate)
-        self.full = None
-        self.first = names_to_generate
-        self.last = None
-        self.middle = None
+    def __init__(self, names_to_generate: list):
+        """
+        :param names_to_generate: A list of templates for each name to generate. Can be a specific template or 'random'.
+        """
 
-    def _load_reference(self, thing, thing_type):
-        # TODO add support for
+        self.raw_name = []
+        self.get_names(names_to_generate)
+        self.nice_name = ' '.join(map(str, self.raw_name))
+
+    @staticmethod
+    def _load_reference(thing: str, thing_type: str) -> dict:
+        """
+
+        :param thing: Phoneme or Template
+        :param thing_type: Only used for templates, specifies the top template layer to be used.
+        :return: Dictionary of the extracted phonemes or template
+        """
         thing_type = thing_type.title()
-        file = '{}.json'.format(thing)
+        file = '{}.json'.format(thing)  # TODO temporary, update to path to correct files based on settings
         with open(file) as f:
             data = json.load(f)
         thing_list = {x['@Name']: x['Part'] for x in data[thing_type]}
         return thing_list
 
-    def generate(self):
-        phonemes = fetch('phonemes', 'phonemes')
-        templates = fetch('templates', 'person')
-        random_template = choice(list(templates.items()))
+    def generate(self, template) -> str:
+        """
+        This performs the main logic in the actual randomization of the name.
+        :param template: This is the phoneme template to be used to generate the name.
+        :return: Newly generated name
+        """
+        phonemes = self._load_reference('phonemes', 'phonemes')
+        templates = self._load_reference('templates', template)
+        random_template: tuple = choice(list(templates.items()))
+        # Makes a choice of a template randomly among the templates loaded.
+        # The first part of the tuple is the name of the template, the actual pattern is at index 1
         name = ''.join([choice(phonemes[x]) for x in random_template[1]]).title()
+        # Pulls out the list of phonemes for each template from the randomly selected template and randomizes it.
         return name
 
-    def _get_names(self, names_to_generate):
-        for name in names_to_generate.items():
-            pass
+    @abstractmethod
+    def get_names(self, names_to_generate: list):
+        """
+        The logic for exactly how names are generated is handled in this method, overridden by the subclasses.
+        :param names_to_generate: A list of templates passed in on initialization.
+        """
+        pass
 
     def __repr__(self):
-        return ' '.join(map(str, self.full))
+        return self.nice_name
 
 
-def fetch(thing: str, thing_type: str):
+class PersonName(Name):
     """
-    Generates a dictionary of phonemes or templates, based on required input.
-    :param thing: Choice of template or phoneme; which thing to generate
-    :param thing_type: This will eventually serve as a category (i.e., ethnicity, genre, person vs place)
-    :return: Returns a dictionary with the name of the phoneme/template as key, and a list as the value
+    Name for a person.
+
+    # TODO expand person names to include additional logic for first, last, middle names
     """
-
-    thing_type = thing_type.title()
-    file = 'names/{}.json'.format(thing)
-    with open(file) as f:
-        data = json.load(f)
-    thing_list = {x['@Name']: x['Part'] for x in data[thing_type]}
-    return thing_list
-
-
-def gen():
-    """
-    Fetches current phonemes and templates and generates a name.
-
-    Eventually, this will be expanded so that it generates names limited to specific phonemes or template  parameters.
-    :return: Returns a string-based name
-    """
-    phonemes = fetch('phonemes', 'phonemes')
-    templates = fetch('templates', 'person')
-    random_template = choice(list(templates.items()))
-    name = ''.join([choice(phonemes[x]) for x in random_template[1]]).title()
-    return name
-
-
-def main():
-    print(gen())
+    def get_names(self, names_to_generate: list):
+        for template in names_to_generate:
+            if template is 'random':
+                template = 'Person'  # TODO replace this with something better for randomizing templates
+            name = self.generate(template)
+            self.raw_name.append(name)
 
 
 if __name__ == '__main__':
-    main()
+    name = PersonName(['random', 'random', 'random'])
+    print(name)
