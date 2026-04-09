@@ -5,7 +5,7 @@ This will generally pertain to generation parameters that are shared across mult
 tiers and decay values.
 """
 
-from .rarity_tier_config import RarityConfig
+from .rarity_config import RarityConfig
 
 
 DEFAULT_RARITY_CONFIG = RarityConfig(

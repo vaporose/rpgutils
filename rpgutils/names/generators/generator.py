@@ -8,7 +8,7 @@ Use the specific generator types (phonetic, compositional, mutated) for actual n
 
 from abc import ABC, abstractmethod
 
-from .rarity_tier_config import RarityConfig
+from .rarity_config import RarityConfig
 from .defaults import DEFAULT_RARITY_CONFIG
 
 
