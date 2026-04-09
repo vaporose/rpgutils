@@ -68,7 +68,10 @@ class PhoneticGenerator(Generator):
         self._collect_explicit_sounds(position_data.include, exclude_set, candidates, weights)
 
         if not candidates:
-            return ""
+            raise ValueError(
+                f"No phoneme candidates for slot '{slot}' in language '{self.language_data.name}'. "
+                f"Check include/exclude configuration in the language profile."
+            )
 
         return random.choices(candidates, weights=weights, k=1)[0]
 
