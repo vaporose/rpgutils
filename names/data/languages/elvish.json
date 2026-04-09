@@ -1,0 +1,56 @@
+{
+  "name": "elvish",
+  "syllable_count": {"min": 2, "max": 4},
+  "syllable_structures": [
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}],
+      "tier": "common"
+    },
+    {
+      "pattern": [{"slot": "nucleus"}],
+      "tier": "uncommon"
+    },
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}, {"slot": "coda"}],
+      "tier": "rare"
+    }
+  ],
+  "positions": {
+    "onset": {
+      "include_tags": [
+        {"tag": "liquid",  "tier": "common"},
+        {"tag": "nasal",   "tier": "common"},
+        {"tag": "glide",   "tier": "uncommon"}
+      ],
+      "include": [
+        {"sound": "s",   "tier": "common"},
+        {"sound": "f",   "tier": "common"},
+        {"sound": "v",   "tier": "uncommon"},
+        {"sound": "th",  "tier": "uncommon"},
+        {"sound": "sh",  "tier": "uncommon"},
+        {"sound": "sl",  "tier": "uncommon"},
+        {"sound": "fl",  "tier": "uncommon"},
+        {"sound": "gl",  "tier": "rare"}
+      ],
+      "exclude": []
+    },
+    "nucleus": {
+      "include_tags": [
+        {"tag": "vowel",     "tier": "common"},
+        {"tag": "diphthong", "tier": "common"}
+      ],
+      "include": [],
+      "exclude": ["u", "ï", "au", "oa", "ou", "oo", "aw", "ow"]
+    },
+    "coda": {
+      "include_tags": [
+        {"tag": "liquid", "tier": "common"},
+        {"tag": "nasal",  "tier": "common"}
+      ],
+      "include": [
+        {"sound": "th", "tier": "uncommon"}
+      ],
+      "exclude": []
+    }
+  }
+}

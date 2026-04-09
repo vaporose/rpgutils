@@ -1,0 +1,49 @@
+{
+  "name": "orcish",
+  "syllable_count": {"min": 1, "max": 3},
+  "syllable_structures": [
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}, {"slot": "coda"}],
+      "tier": "common"
+    },
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}],
+      "tier": "uncommon"
+    }
+  ],
+  "positions": {
+    "onset": {
+      "include_tags": [
+        {"tag": "guttural", "tier": "common"}
+      ],
+      "include": [
+        {"sound": "g",   "tier": "common"},
+        {"sound": "k",   "tier": "common"},
+        {"sound": "z",   "tier": "common"},
+        {"sound": "x",   "tier": "uncommon"}
+      ],
+      "exclude": []
+    },
+    "nucleus": {
+      "include_tags": [
+        {"tag": "dark", "tier": "common"}
+      ],
+      "include": [],
+      "exclude": ["ï", "au", "oa", "ou", "oo", "aw", "ow"]
+    },
+    "coda": {
+      "include_tags": [
+        {"tag": "guttural", "tier": "common"}
+      ],
+      "include": [
+        {"sound": "g",   "tier": "common"},
+        {"sound": "r",   "tier": "common"},
+        {"sound": "ng",  "tier": "common"},
+        {"sound": "k",   "tier": "uncommon"},
+        {"sound": "z",   "tier": "uncommon"},
+        {"sound": "rg",  "tier": "uncommon"}
+      ],
+      "exclude": []
+    }
+  }
+}
