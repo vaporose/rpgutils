@@ -5,3 +5,7 @@ description = "A Python library of procedural generation utilities for RPG-relat
 requires-python = ">=3.11"
 license = {file = "LICENSE"}
 dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rpgutils*"]
