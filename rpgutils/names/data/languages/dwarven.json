@@ -1,0 +1,58 @@
+{
+  "name": "dwarven",
+  "syllable_count": {"min": 1, "max": 3},
+  "syllable_structures": [
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}, {"slot": "coda"}],
+      "tier": "common"
+    },
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}],
+      "tier": "uncommon"
+    },
+    {
+      "pattern": [{"slot": "nucleus"}, {"slot": "coda"}],
+      "tier": "rare"
+    }
+  ],
+  "positions": {
+    "onset": {
+      "include_tags": [
+        {"tag": "stop",     "tier": "common"},
+        {"tag": "guttural", "tier": "common"}
+      ],
+      "include": [
+        {"sound": "dr",  "tier": "common"},
+        {"sound": "gr",  "tier": "common"},
+        {"sound": "br",  "tier": "uncommon"},
+        {"sound": "tr",  "tier": "uncommon"},
+        {"sound": "kr",  "tier": "uncommon"},
+        {"sound": "thr", "tier": "uncommon"}
+      ],
+      "exclude": ["j", "x"]
+    },
+    "nucleus": {
+      "include_tags": [
+        {"tag": "short", "tier": "common"}
+      ],
+      "include": [],
+      "exclude": ["ï", "ae", "ai", "ea", "ie", "ia", "oe", "ei", "ee", "oy", "ay", "oo", "ou", "oa", "au", "aw", "ow"]
+    },
+    "coda": {
+      "include_tags": [
+        {"tag": "liquid", "tier": "common"},
+        {"tag": "nasal",  "tier": "common"}
+      ],
+      "include": [
+        {"sound": "nd",  "tier": "common"},
+        {"sound": "rn",  "tier": "common"},
+        {"sound": "kh",  "tier": "common"},
+        {"sound": "st",  "tier": "uncommon"},
+        {"sound": "ld",  "tier": "uncommon"},
+        {"sound": "k",   "tier": "uncommon"},
+        {"sound": "g",   "tier": "rare"}
+      ],
+      "exclude": ["w", "y", "j", "sh", "ts"]
+    }
+  }
+}

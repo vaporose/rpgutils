@@ -1,0 +1,62 @@
+{
+  "name": "japanese",
+  "syllable_count": {"min": 2, "max": 4},
+  "syllable_structures": [
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}],
+      "tier": "common"
+    },
+    {
+      "pattern": [{"slot": "nucleus"}],
+      "tier": "uncommon"
+    },
+    {
+      "pattern": [{"slot": "onset"}, {"slot": "nucleus"}, {"slot": "coda"}],
+      "tier": "rare"
+    }
+  ],
+  "positions": {
+    "onset": {
+      "include_tags": [],
+      "include": [
+        {"sound": "k",  "tier": "common"},
+        {"sound": "s",  "tier": "common"},
+        {"sound": "t",  "tier": "common"},
+        {"sound": "n",  "tier": "common"},
+        {"sound": "h",  "tier": "common"},
+        {"sound": "m",  "tier": "common"},
+        {"sound": "r",  "tier": "common"},
+        {"sound": "y",  "tier": "uncommon"},
+        {"sound": "w",  "tier": "uncommon"},
+        {"sound": "g",  "tier": "uncommon"},
+        {"sound": "z",  "tier": "uncommon"},
+        {"sound": "d",  "tier": "uncommon"},
+        {"sound": "b",  "tier": "uncommon"},
+        {"sound": "p",  "tier": "rare"},
+        {"sound": "sh", "tier": "common"},
+        {"sound": "ch", "tier": "common"},
+        {"sound": "ts", "tier": "uncommon"},
+        {"sound": "j",  "tier": "uncommon"}
+      ],
+      "exclude": []
+    },
+    "nucleus": {
+      "include_tags": [],
+      "include": [
+        {"sound": "a", "tier": "common"},
+        {"sound": "i", "tier": "common"},
+        {"sound": "u", "tier": "common"},
+        {"sound": "e", "tier": "common"},
+        {"sound": "o", "tier": "common"}
+      ],
+      "exclude": []
+    },
+    "coda": {
+      "include_tags": [],
+      "include": [
+        {"sound": "n", "tier": "common"}
+      ],
+      "exclude": []
+    }
+  }
+}

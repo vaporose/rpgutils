@@ -1,0 +1,20 @@
+[project]
+name = "rpgutils"
+version = "0.1.0"
+description = "A Python library of procedural generation utilities for RPG-related projects."
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rpgutils*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
