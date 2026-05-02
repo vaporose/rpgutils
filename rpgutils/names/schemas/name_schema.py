@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 
-from names.generators import Generator
+from ..generators import Generator
+from .string_utilities import capitalize
 
 
 @dataclass
@@ -63,7 +64,7 @@ class NameSchema:
     @property
     def full_name(self) -> str:
         """The complete name string, with all parts joined by the separator."""
-        return self._separator.join(part.value for part in self._parts)
+        return self._separator.join(capitalize(part.value, {0}) for part in self._parts)
 
     def __call__(self) -> str:
         return self.full_name
@@ -73,3 +74,5 @@ class NameSchema:
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}({self.full_name!r})"
+
+
