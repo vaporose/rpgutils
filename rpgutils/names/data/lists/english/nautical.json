@@ -1,0 +1,22 @@
+[
+  {"value": "Storm", "context": ["nautical"], "grammar": ["noun", "adjective"]},
+  {"value": "Wave", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Tide", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Gale", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Tempest", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Squall", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Wake", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Horizon", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Anchor", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Compass", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Current", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Reef", "context": ["nautical"], "grammar": ["noun"]},
+  {"value": "Swift", "context": ["nautical"], "grammar": ["adjective"]},
+  {"value": "Bold", "context": ["nautical"], "grammar": ["adjective"]},
+  {"value": "Iron", "context": ["nautical"], "grammar": ["adjective", "noun"]},
+  {"value": "Silver", "context": ["nautical"], "grammar": ["adjective", "noun"]},
+  {"value": "Relentless", "context": ["nautical"], "grammar": ["adjective"]},
+  {"value": "Proud", "context": ["nautical"], "grammar": ["adjective"]},
+  {"value": "Fearless", "context": ["nautical"], "grammar": ["adjective"]},
+  {"value": "Undying", "context": ["nautical"], "grammar": ["adjective"]}
+]

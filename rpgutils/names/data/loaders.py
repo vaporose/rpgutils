@@ -7,6 +7,7 @@ from pathlib import Path
 import unicodedata
 
 from .language_data import LanguageData
+from .list_data import ListData, ListEntry
 
 
 def _normalize(obj):
@@ -51,3 +52,30 @@ def load_language(language_name: str) -> LanguageData:
         json_data = _normalize(json.load(file))
 
     return LanguageData.from_dict(json_data)
+
+
+def load_list(language: str, source: str) -> ListData:
+    """Loads a word list from the bundled lists directory.
+
+    Args:
+        language: The language folder to look in (e.g. 'english', 'elvish').
+        source: The list file to load, without extension (e.g. 'nautical', 'surnames').
+
+    Returns:
+        A ListData instance with inverted indexes built.
+
+    Raises:
+        FileNotFoundError: If the language folder or source file does not exist.
+    """
+    lists_path = Path(__file__).parent / "lists" / language
+    if not lists_path.exists():
+        raise FileNotFoundError(f"No list data found for language '{language}'")
+
+    list_file = lists_path / f"{source}.json"
+    if not list_file.exists():
+        raise FileNotFoundError(f"No list file '{source}' found for language '{language}'")
+
+    with list_file.open(encoding="utf-8") as f:
+        raw = json.load(f)
+
+    return ListData([ListEntry.from_dict(entry) for entry in raw])

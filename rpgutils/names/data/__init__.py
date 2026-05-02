@@ -10,7 +10,7 @@ from .language_data import (
     SoundInclusion,
 )
 
-from .loaders import load_language
+from .loaders import load_language, load_list
 
 __all__ = [
     "LanguageData",
@@ -21,6 +21,7 @@ __all__ = [
     "TagInclusion",
     "SoundInclusion",
     "load_language",
+    "load_list",
     "PHONEMES",
     "SlotDefinition"
 ]
