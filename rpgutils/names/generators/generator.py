@@ -1,9 +1,9 @@
 """
 Base class for all generators.
 
-This will not have any use if implemented directly, as the `generate` method has no implementation.
+This will not have any use if instantiated directly, as the `generate` method has no implementation.
 
-Use the specific generator types (phonetic, compositional, mutated) for actual name generation.
+Use the specific generator types for actual name generation.
 """
 
 from abc import ABC, abstractmethod
