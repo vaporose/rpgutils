@@ -25,8 +25,7 @@ Names are built in two layers. A **generator** produces a single string
 component; a **schema** arranges one or more components into a finished name.
 
 ```python
-from rpgutils.names.generators import ListGenerator
-from rpgutils.names.generators.phonetic_generator import PhoneticGenerator
+from rpgutils.names.generators import ListGenerator, PhoneticGenerator
 from rpgutils.names.schemas import PersonNameSchema, ShipName
 
 PhoneticGenerator("elvish").generate()      # 'ngaymie'
