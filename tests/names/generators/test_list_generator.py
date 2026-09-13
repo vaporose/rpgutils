@@ -66,16 +66,17 @@ def test_empty_candidates_raises():
 
 
 def test_user_entries_additive_extends_pool():
-    extra = [{"value": "Thunderclad", "context": ["nautical"], "grammar": ["noun"]}]
+    extra = [{"value": "Thunderclad", "context": ["test_unique"], "grammar": ["noun"]}]
     gen = ListGenerator(
         language="english",
         source="nautical",
         grammar=["noun"],
+        context=["test_unique"],
         user_entries=extra,
         user_mode="additive",
     )
-    results = {gen.generate() for _ in range(50)}
-    assert "Thunderclad" in results
+    for _ in range(10):
+        assert gen.generate() == "Thunderclad"
 
 
 def test_user_entries_override_replaces_bundled():

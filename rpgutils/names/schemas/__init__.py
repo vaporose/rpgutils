@@ -1,2 +1,3 @@
 from .name_schema import NameSchema, NamePart
-from .patterned_name_schema import PatternedNameSchema, ShipName, InnName, ShopName, ItemName
+from .person_name import PersonNameSchema
+from .patterned import NamePattern, PatternedNameSchema, ShipName
